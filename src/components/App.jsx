@@ -1,3 +1,5 @@
+//import { Profile } from './Profile';
+
 export const App = () => {
   return (
     <div
@@ -13,5 +15,5 @@ export const App = () => {
       React homework template
     </div>
   );
-};
+}
 
