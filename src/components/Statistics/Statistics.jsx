@@ -1,14 +1,47 @@
-// import css from './Statistics.module.css';
-import statistics from './data.json';
 import PropTypes from 'prop-types';
 
-export const Statistics = ({ title, stats }) => {
+import {
+    Wrap,
+    Title,
+    StatList,
+    Item,
+    Label,
+    Percentage,
+} from './Statistics.styled';
+
+export const Statistics = ({ stats }) => {
     return (
-        <Statistics title={statistics.title} stats={statistics.stats} />
-    )
+        <Wrap>
+            <Title>Upload stats</Title>
+
+            <StatList>
+                <Item>
+                    <Label>{stats.label}</Label>
+                    <Percentage>{stats.percentage}</Percentage>
+                </Item>
+                <Item>
+                    <Label>{stats.label}</Label>
+                    <Percentage>{stats.percentage}</Percentage>
+                </Item>
+                <Item>
+                    <Label>{stats.label}</Label>
+                    <Percentage>{stats.percentage}</Percentage>
+                </Item>
+                <Item>
+                    <Label>{stats.label}</Label>
+                    <Percentage>{stats.percentage}%</Percentage>
+                </Item>
+            </StatList>
+        </Wrap>
+    ) 
 }
 
 Statistics.propTypes = {
-    title: PropTypes.string.isRequired,
-    stats:PropTypes.array.isRequired,
+    stats:PropTypes.arrayOf(
+        PropTypes.exact({
+            id: PropTypes.string.isRequired,
+            label: PropTypes.string.isRequired,
+            percentage: PropTypes.number.isRequired,
+        })
+    ).isRequired,
 };

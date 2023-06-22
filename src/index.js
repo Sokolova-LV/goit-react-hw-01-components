@@ -27,4 +27,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 // Statistics - title: string, stats: array;
 // FriendList - friends: array;
 // FriendListItem - avatar: string, name: string, isOnline: bool;
-// TransactionHistory - id: string, type: string, amount: number, currency: string;
+// TransactionHistory - items: array;
