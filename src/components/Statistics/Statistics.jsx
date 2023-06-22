@@ -17,15 +17,15 @@ export const Statistics = ({ stats }) => {
             <StatList>
                 <Item>
                     <Label>{stats.label}</Label>
-                    <Percentage>{stats.percentage}</Percentage>
+                    <Percentage>{stats.percentage}%</Percentage>
                 </Item>
                 <Item>
                     <Label>{stats.label}</Label>
-                    <Percentage>{stats.percentage}</Percentage>
+                    <Percentage>{stats.percentage}%</Percentage>
                 </Item>
                 <Item>
                     <Label>{stats.label}</Label>
-                    <Percentage>{stats.percentage}</Percentage>
+                    <Percentage>{stats.percentage}%</Percentage>
                 </Item>
                 <Item>
                     <Label>{stats.label}</Label>

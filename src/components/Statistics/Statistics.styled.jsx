@@ -9,21 +9,23 @@ export const Wrap = styled.section`
 `;
 
 export const Title = styled.h2`
-margin: auto;
-padding: 30px 0;
-text-align: center;
-text-transform: uppercase;
-background-color: white;
-font-size: 24px;
-font-weight: 700;
-border-radius: 10px;
+    margin: auto;
+    padding: 30px 0;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: white;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 10px;
 `;
 
 export const StatList = styled.ul`
     display: flex;
     justify-content: center;
-    margin: auto;
+    margin: 20px auto;
     padding: 0;
+    background-color: white;
+    border-radius: 10px;
 `;
 
 export const Item = styled.li`
@@ -31,7 +33,9 @@ export const Item = styled.li`
     flex-direction: column;
     align-items: center;
     width: 40px;
-    padding: 16px 8px;
+    padding: 16px 16px;
+    background-color: yellow;
+    border: 1px solid pink;
 `;
 
 export const Label = styled.span`
@@ -42,5 +46,4 @@ export const Label = styled.span`
 export const Percentage = styled.span`
     font-weight: 700;
     font-size: 20px;
-    margin-top: 5px;
 `;
