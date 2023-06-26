@@ -22,6 +22,7 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
                 <Tag>{tag}</Tag>
                 <Location>{location}</Location>
             </Description>
+
             <Stats>
                 <Item>
                     <Label>Followers</Label>
@@ -34,7 +35,7 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
                 <Item>
                     <Label>Likes</Label>
                     <Quantity>{stats.likes}</Quantity>
-                </Item> 
+                </Item>
             </Stats>
         </Wrap>
     )

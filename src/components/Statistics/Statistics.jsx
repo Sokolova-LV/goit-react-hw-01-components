@@ -9,28 +9,20 @@ import {
     Percentage,
 } from './Statistics.styled';
 
-export const Statistics = ({ stats }) => {
+export const Statistics = ({ stats, title }) => {
     return (
         <Wrap>
-            <Title>Upload stats</Title>
-
+            {title.length > 0 && (
+                <Title>{title}</Title>
+            )}
+            
             <StatList>
+                {stats.map(stat => (
                 <Item>
-                    <Label>{stats.label}</Label>
-                    <Percentage>{stats.percentage}%</Percentage>
+                    <Label>{stat.label}</Label>
+                    <Percentage>{stat.percentage}%</Percentage>
                 </Item>
-                <Item>
-                    <Label>{stats.label}</Label>
-                    <Percentage>{stats.percentage}%</Percentage>
-                </Item>
-                <Item>
-                    <Label>{stats.label}</Label>
-                    <Percentage>{stats.percentage}%</Percentage>
-                </Item>
-                <Item>
-                    <Label>{stats.label}</Label>
-                    <Percentage>{stats.percentage}%</Percentage>
-                </Item>
+                ))}
             </StatList>
         </Wrap>
     ) 
@@ -42,6 +34,6 @@ Statistics.propTypes = {
             id: PropTypes.string.isRequired,
             label: PropTypes.string.isRequired,
             percentage: PropTypes.number.isRequired,
-        })
+        }).isRequired,
     ).isRequired,
 };

@@ -21,16 +21,13 @@ export const TransactionHistory = ({ items }) => {
             </Head>
 
             <Body>
-                <Row>
-                    <BodyRow>{items.type}</BodyRow>
-                    <BodyRow>{items.amount}</BodyRow>
-                    <BodyRow>{items.currency}</BodyRow>
-                </Row>
-                <Row>
-                    <BodyRow>{items.type}</BodyRow>
-                    <BodyRow>{items.amount}</BodyRow>
-                    <BodyRow>{items.currency}</BodyRow>
-                </Row>
+                {items.map(({ type, amount, currency }) => (
+                    <Row>
+                        <BodyRow>{type}</BodyRow>
+                        <BodyRow>{amount}</BodyRow>
+                        <BodyRow>{currency}</BodyRow>
+                    </Row>
+                ))}
             </Body>
         </History>
     ) 
@@ -43,6 +40,6 @@ TransactionHistory.propTypes = {
             type: PropTypes.string.isRequired,
             amount: PropTypes.string.isRequired,
             currency: PropTypes.string.isRequired,
-        })
+        }).isRequired,
     ).isRequired,
 };
