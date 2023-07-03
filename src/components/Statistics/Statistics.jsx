@@ -12,7 +12,7 @@ import {
 export const Statistics = ({ stats, title }) => {
     return (
         <Wrap>
-            {title.length > 0 && (
+            {title && (
                 <Title>{title}</Title>
             )}
             
